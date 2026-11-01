@@ -1,0 +1,112 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #141a2e, #2b1d4a);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1f2430;
+  padding: 24px 16px;
+}
+
+.app { width: min(100%, 640px); margin: 0 auto; }
+
+h1 { color: #fff; text-align: center; margin-bottom: 20px; }
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9dcea;
+  border-radius: 10px;
+  font: inherit;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus { outline: 2px solid #8b5cf6; }
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+.primary {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.primary:hover { background: #7c3aed; }
+
+.ghost {
+  padding: 6px 12px;
+  border: 1px solid #d9dcea;
+  border-radius: 8px;
+  background: #f5f6fc;
+  font-size: 0.85rem;
+}
+
+.error { color: #dc2626; font-size: 0.85rem; }
+
+.summary { color: #cfd3ea; text-align: center; margin-bottom: 14px; font-size: 0.9rem; }
+
+.empty { color: #cfd3ea; text-align: center; padding: 24px 0; }
+
+.list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.movie { display: flex; flex-direction: column; gap: 8px; }
+
+.movie-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+
+.movie-header h2 { font-size: 1.15rem; word-break: break-word; }
+
+.remove {
+  border: none;
+  background: transparent;
+  color: #9aa1b5;
+  font-size: 1rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.remove:hover { color: #ef4444; background: #fee2e2; }
+
+.stars-shown { font-size: 1.1rem; }
+
+.stars-count { margin-left: 8px; font-size: 0.8rem; color: #7b8194; }
+
+.star-rating { display: inline-flex; gap: 2px; }
+
+.star {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #d0d4e4;
+  transition: transform 0.1s;
+}
+
+.star.on { color: #f5b301; }
+.star:hover { transform: scale(1.15); }
+
+.review p { margin-bottom: 8px; color: #3b4156; white-space: pre-wrap; word-break: break-word; }
+
+.review-edit { display: flex; flex-direction: column; gap: 8px; }
+.review-actions { display: flex; gap: 8px; }
